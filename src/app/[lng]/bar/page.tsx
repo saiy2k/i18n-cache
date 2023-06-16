@@ -8,6 +8,8 @@ import styles from '../../page.module.css'
 import { useTranslation } from '@/hooks/useTranslation';
 import { getPathnameWihoutLng, url } from '@/lib/i18n';
 
+import LinkSection from '../LinkSection';
+
 export default function Home({ params: { lng } }: any) {
 
   const pathname = usePathname();
@@ -41,37 +43,8 @@ export default function Home({ params: { lng } }: any) {
         <h1> Bar </h1>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Hello world
-          </h2>
-          <p> { t('HelloWorld') } </p>
-        </a>
+      <LinkSection t={t} />
 
-        <Link href='/foo' className={styles.card}>
-          <h2>
-            To Foo <span>-&gt;</span>
-          </h2>
-        </Link>
-
-        <Link href='/bar' className={styles.card}>
-          <h2>
-            To Bar <span>-&gt;</span>
-          </h2>
-        </Link>
-
-        <Link href='/baz' className={styles.card}>
-          <h2>
-            To Baz <span>-&gt;</span>
-          </h2>
-        </Link>
-
-      </div>
     </main>
   )
 }

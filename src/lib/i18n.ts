@@ -30,6 +30,7 @@ export type GetI18nOptionsProps = {
 }
 export function getI18nOptions(props: GetI18nOptionsProps = {}) {
 
+  /*
   console.log("GET OPTION ", {
     debug: process.env.NODE_ENV === 'development',
     supportedLngs: props.lngs || lngs,
@@ -39,6 +40,7 @@ export function getI18nOptions(props: GetI18nOptionsProps = {}) {
     defaultNS: defaultI18nNamespace,
     ns: props.ns || defaultI18nNamespace,
   })
+  */
   return {
     debug: process.env.NODE_ENV === 'development',
     supportedLngs: props.lngs || lngs,

@@ -45,6 +45,7 @@ export async function middleware(req: NextRequest) {
   const lng = getLng(req);
 
   // Get response (with if necessary)
+  console.log('lng == getPathnameLng(pathname)', lng == getPathnameLng(pathname));
   const res = (lng == getPathnameLng(pathname))
     ? NextResponse.next()
     : NextResponse.redirect(new URL(getRedirectedLngUrl(pathname, lng), req.url));
