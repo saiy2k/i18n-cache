@@ -1,0 +1,11 @@
+{
+  "TestCommon": "[ES]TestCommon[/ES]",
+  "TestCommonFooBar": "[ES]TestCommonFooBar[/ES]",
+  "All": "Todo",
+  "No options": "Sin opciones",
+  "Yes": "Sí",
+  "No": "No",
+  "Id": "Identificación",
+  "Owner Id": "Identificación del propietario",
+  "#end": "--------"
+}
