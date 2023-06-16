@@ -3,9 +3,11 @@
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-import styles from '../../page.module.css'
+import Image from 'next/image'
+import styles from '../page.module.css'
 
 import { useTranslation } from '@/hooks/useTranslation';
+import { LngContext, LngContextType } from '@/contexts/LngContext';
 import { getPathnameWihoutLng, url } from '@/lib/i18n';
 
 export default function Home({ params: { lng } }: any) {
@@ -38,20 +40,10 @@ export default function Home({ params: { lng } }: any) {
       </div>
 
       <div className={styles.center}>
-        <h1> Foo </h1>
+        <h1> Home </h1>
       </div>
 
       <div className={styles.grid}>
-        <a
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Hello world
-          </h2>
-          <p> { t('HelloWorld') } </p>
-        </a>
 
         <Link href='/foo' className={styles.card}>
           <h2>
@@ -65,11 +57,6 @@ export default function Home({ params: { lng } }: any) {
           </h2>
         </Link>
 
-        <Link href='/baz' className={styles.card}>
-          <h2>
-            To Baz <span>-&gt;</span>
-          </h2>
-        </Link>
 
       </div>
     </main>

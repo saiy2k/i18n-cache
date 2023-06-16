@@ -1,6 +1,5 @@
 {
-  "TestCommon": "[FR]TestCommon[/FR]",
-  "TestCommonFooBar": "[FR]TestCommonFooBar[/FR]",
+  "HelloWorld": "Bonjour le monde",
   "All": "Tous",
   "No options": "Aucune option",
   "Yes": "Oui",

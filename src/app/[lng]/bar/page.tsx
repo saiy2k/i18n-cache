@@ -3,11 +3,9 @@
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-import Image from 'next/image'
 import styles from '../../page.module.css'
 
 import { useTranslation } from '@/hooks/useTranslation';
-import { LngContext, LngContextType } from '@/contexts/LngContext';
 import { getPathnameWihoutLng, url } from '@/lib/i18n';
 
 export default function Home({ params: { lng } }: any) {
@@ -50,9 +48,9 @@ export default function Home({ params: { lng } }: any) {
           rel="noopener noreferrer"
         >
           <h2>
-            Test Common
+            Hello world
           </h2>
-          <p> { t('TestCommon') } </p>
+          <p> { t('HelloWorld') } </p>
         </a>
 
         <Link href='/foo' className={styles.card}>
@@ -64,6 +62,12 @@ export default function Home({ params: { lng } }: any) {
         <Link href='/bar' className={styles.card}>
           <h2>
             To Bar <span>-&gt;</span>
+          </h2>
+        </Link>
+
+        <Link href='/baz' className={styles.card}>
+          <h2>
+            To Baz <span>-&gt;</span>
           </h2>
         </Link>
 

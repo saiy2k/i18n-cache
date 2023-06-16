@@ -38,7 +38,7 @@ export default function Home({ params: { lng } }: any) {
       </div>
 
       <div className={styles.center}>
-        <h1> Foo </h1>
+        <h1> Baz </h1>
       </div>
 
       <div className={styles.grid}>
